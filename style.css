@@ -1,0 +1,17 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    color: black;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30pt;
+    padding: 10px 20px;
+    display: flex;
+    position: relative;
+}
+
+.mixed-color {
+    background: linear-gradient(to right, white, orange);
+}
