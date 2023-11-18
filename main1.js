@@ -27,23 +27,6 @@ const startCameraButton = document.getElementById('startCamera');
 const stopCameraButton = document.getElementById('stopCamera');
 let stream;
 
-startCameraButton.addEventListener('click', async() => {
-    try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        cameraFeed.srcObject = stream;
-        cameraFeed.play();
-    } catch (error) {
-        console.error('Error accessing camera:', error);
-    }
-});
-
-stopCameraButton.addEventListener('click', () => {
-    if (stream) {
-        const tracks = stream.getTracks();
-        tracks.forEach((track) => track.stop());
-        cameraFeed.srcObject = null;
-    }
-});
 
 const alarmSound = document.getElementById('alarmSound');
 const activateAlarmButton = document.getElementById('activateAlarm');
@@ -58,8 +41,27 @@ activateAlarmButton.addEventListener('click', () => {
 
     }
 });
+if ('Notification' in window) {
 
-function activateAlarm() {
-    alert("EVACUATE IMMEDIALTELY!!", "If you have an emergency and need to contact the fire brigade, please dial the local emergency number: 101");
 
+    Notification.requestPermission().then(function(permission) {
+        if (permission === 'granted') {
+
+            var notification = new Notification('Title', {
+                body: 'This is the body text of the notification.',
+                icon: 'path/to/icon.png'
+            });
+
+
+            notification.onclick = function() {
+                console.log('Notification clicked');
+
+            };
+        } else {
+            console.warn('Permission for notifications denied');
+        }
+    });
+
+} else {
+    console.warn('Notifications not supported in this browser');
 }

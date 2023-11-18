@@ -41,3 +41,27 @@ stopCameraButton.addEventListener('click', () => {
         cameraFeed.srcObject = null;
     }
 });
+if ('Notification' in window) {
+
+    // Request permission to show notifications
+    Notification.requestPermission().then(function(permission) {
+        if (permission === 'granted') {
+            // Create a notification
+            var notification = new Notification('Title', {
+                body: 'This is the body text of the notification.',
+                icon: 'path/to/icon.png' // Optional: You can provide an icon for the notification
+            });
+
+            // Handle click on the notification
+            notification.onclick = function() {
+                console.log('Notification clicked');
+                // You can add additional actions here
+            };
+        } else {
+            console.warn('Permission for notifications denied');
+        }
+    });
+
+} else {
+    console.warn('Notifications not supported in this browser');
+}
