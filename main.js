@@ -31,7 +31,12 @@ function goToFormsScreen() {
     window.location.href = "forme.html";
 }
 
+function goToOldScreen() {
 
+    window.location.href = "index.html";
+}
+
+document.getElementById("back").addEventListener("click", goToOldScreen);
 document.getElementById("forms").addEventListener("click", goToFormsScreen);
 
 

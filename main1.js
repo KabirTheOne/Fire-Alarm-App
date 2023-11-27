@@ -1,31 +1,3 @@
-/*function activateWiFi() {
-alert("Please enable Wi-Fi in your device's settings.");
-}
-
-function activateBluetooth() {
-    alert("Please enable Bluetooth in your device's settings.");
-}
-
-
-function goToNextScreen() {
-
-    window.location.href = "index1.html";
-}*/
-
-function goToOldScreen() {
-
-    window.location.href = "index.html";
-}
-
-function goToAccScreen() {
-
-    window.location.href = "account.html";
-}
-
-
-document.getElementById("account").addEventListener("click", goToAccScreen);
-document.getElementById("bacK").addEventListener("click", goToOldScreen);
-
 const cameraFeed = document.getElementById('cameraFeed');
 const startCameraButton = document.getElementById('startCamera');
 const stopCameraButton = document.getElementById('stopCamera');

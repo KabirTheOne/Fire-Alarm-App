@@ -40,12 +40,12 @@
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
         <h1>Fire Alarm App
         </h1>
-        <button id="account" class="center">Account</button>
-        <button id="about" class="center">About</button>
+        <button id="account" class="center" onclick="goToAccountScreen()">Account</button>
+        <button id="about" class="center" onclick="goToAboutScreen()">About</button>
 
-        <button id="settings" class="center">Settings</button>
+        <button id="settings" class="center" onclick="goToSettingsScreen()">Settings</button>
         <button id="well">All is Well!</button>
-        <button id="danger" onclick="triggerSensor()">Danger</button>
+        <button id="danger" onclick="triggerSensor()">Alarming</button>
 
 
         <script>
