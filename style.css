@@ -6,29 +6,20 @@ body {
     /* font-family: 'Dancing Script', cursive;*/
     font-family: 'EB Garamond', serif;
     color: black;
-    background-color: #a8d5e5
+    background-color: #a8d5e5;
 }
 
-#bluetooth,
-#wifi,
-#activateAlarm,
-#account,
-#connection,
-#about,
-#backButton,
-#settings,
-#forms {
+.center {
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 30pt;
+    font-size: 20pt;
     padding: 10px 20px;
     display: flex;
     position: relative;
     background-color: rgba(4, 29, 75, 0.872);
     margin-top: 20px;
     color: rgb(249, 248, 248);
-    width: 250px;
 }
 
 
@@ -52,11 +43,24 @@ ol {
 #well {
     cursor: pointer;
     border-radius: 5px;
-    font-size: 30pt;
+    font-size: 20pt;
     padding: 10px 20px;
     background-color: rgba(4, 75, 35, 0.872);
     margin-top: 20px;
     color: rgb(249, 248, 248);
-    width: 250px;
+    width: 200px;
     text-align: center;
+}
+
+#accountButton {
+    text-align: center;
+}
+
+button {
+    text-align: left;
+    position: relative;
+}
+
+a {
+    position: relative;
 }

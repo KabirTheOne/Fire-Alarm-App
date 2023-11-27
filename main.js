@@ -26,6 +26,14 @@ function goToSettingsScreen() {
     window.location.href = "settings.html";
 }
 
+function goToFormsScreen() {
+
+    window.location.href = "forme.html";
+}
+
+
+document.getElementById("forms").addEventListener("click", goToFormsScreen);
+
 
 document.getElementById("settings").addEventListener("click", goToSettingsScreen);
 document.getElementById("account").addEventListener("click", goToAccountScreen);
@@ -36,12 +44,7 @@ document.getElementById("about").addEventListener("click", goToAboutScreen);
 
 document.getElementById("connection").addEventListener("click", goToConnectionScreen);
 
-function goToFormScreen() {
 
-    window.location.href = "former.html";
-}
-
-document.getElementById("forms").addEventListener("click", goToFormScreen);
 
 
 
