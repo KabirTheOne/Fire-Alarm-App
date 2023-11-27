@@ -1,26 +1,40 @@
-body {
-    font-family: 'Dancing Script', cursive;
-    color: black;
+title {
+    font-weight: bold;
 }
 
-button {
+body {
+    /* font-family: 'Dancing Script', cursive;*/
+    font-family: 'EB Garamond', serif;
+    color: black;
+    background-color: #a8d5e5
+}
+
+#bluetooth,
+#wifi,
+#activateAlarm,
+#account,
+#connection,
+#about,
+#backButton,
+#settings,
+#forms {
+    text-align: center;
     cursor: pointer;
     border-radius: 5px;
     font-size: 30pt;
     padding: 10px 20px;
     display: flex;
     position: relative;
-    background-color: rgba(100, 148, 237, 0.872);
+    background-color: rgba(4, 29, 75, 0.872);
     margin-top: 20px;
-    animation-name: example;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    font-weight: bold;
+    color: rgb(249, 248, 248);
+    width: 250px;
 }
 
-.mixed-color {
-    background: linear-gradient(to right, yellow, orange);
-}
+
+/*.mixed-color {
+                        background: linear-gradient(to right, rgb(234, 255, 0), rgb(0, 204, 255));
+                    }*/
 
 @keyframes example {
     from {
@@ -29,4 +43,20 @@ button {
     to {
         box-shadow: 5px 5px 50px rgb(0, 255, 21);
     }
+}
+
+ol {
+    font-size: 20px;
+}
+
+#well {
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30pt;
+    padding: 10px 20px;
+    background-color: rgba(4, 75, 35, 0.872);
+    margin-top: 20px;
+    color: rgb(249, 248, 248);
+    width: 250px;
+    text-align: center;
 }

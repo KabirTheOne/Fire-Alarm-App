@@ -3,6 +3,7 @@
 <head>
     <title>Fire Alarm App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://as1.ftcdn.net/v2/jpg/01/02/63/36/1000_F_102633622_3pc0Ncmz6VAISPokbJsg1CZz1yMNYXnS.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -10,26 +11,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script&family=Julee&family=Yatra+One&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        #danger {
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 30pt;
+            padding: 10px 20px;
+            background-color: rgba(95, 99, 97, 0.872);
+            margin-top: 20px;
+            color: rgb(249, 248, 248);
+            width: 250px;
+        }
+    </style>
 </head>
 
 <body class="mixed-color">
-    <center>
 
 
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <h1>Fire Alarm App
-            </h1>
-            <button id="navigateButton">Next Page</button>
-            <button id="wifiButton">WiFi</button>
-            <button id="bluetoothButton">Bluetooth</button>
-        </div>
-        <script src="main.js">
+
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+        <h1>Fire Alarm App
+        </h1>
+        <button id="account">Account</button>
+        <button id="about">About</button>
+
+        <button id="settings">Settings</button>
+        <button id="well">All is Well!</button>
+        <button id="danger" onclick="triggerSensor()">Danger</button>
+
+
+        <script>
+            // Simulate sensor trigger
+            function triggerSensor() {
+                // Assume the sensor is triggered
+                // You would replace this with your actual sensor logic
+                let isSensorTriggered = true;
+
+                if (isSensorTriggered) {
+                    changeButtonColor('red');
+                }
+            }
+
+            // Function to change button color
+            function changeButtonColor(color) {
+                document.getElementById('danger').style.backgroundColor = color;
+            }
         </script>
-    </center>
+
+
+        <script src="https://example.com/script.js "></script>
+
+        <script src="main.js ">
+        </script>
+
+
+
 </body>
 
 </html>

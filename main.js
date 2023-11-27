@@ -6,41 +6,45 @@ function activateBluetooth() {
     alert("Please enable Bluetooth in your device's settings.");
 }
 
+function goToAboutScreen() {
 
-function goToNextScreen() {
+    window.location.href = "about.html";
+}
 
-    window.location.href = "index1.html";
+function goToConnectionScreen() {
+
+    window.location.href = "connection.html";
+}
+
+function goToAccountScreen() {
+
+    window.location.href = "account.html";
+}
+
+function goToSettingsScreen() {
+
+    window.location.href = "settings.html";
 }
 
 
+document.getElementById("settings").addEventListener("click", goToSettingsScreen);
+document.getElementById("account").addEventListener("click", goToAccountScreen);
+
+document.getElementById("about").addEventListener("click", goToAboutScreen);
+//document.getElementById("wifiButton").addEventListener("click", activateWiFi);//
+//document.getElementById("bluetoothButton").addEventListener("click", activateBluetooth); //
+
+document.getElementById("connection").addEventListener("click", goToConnectionScreen);
+
+function goToFormScreen() {
+
+    window.location.href = "former.html";
+}
+
+document.getElementById("forms").addEventListener("click", goToFormScreen);
 
 
-document.getElementById("wifiButton").addEventListener("click", activateWiFi);
-document.getElementById("bluetoothButton").addEventListener("click", activateBluetooth);
-document.getElementById("navigateButton").addEventListener("click", goToNextScreen);
 
-const cameraFeed = document.getElementById('cameraFeed');
-const startCameraButton = document.getElementById('startCamera');
-const stopCameraButton = document.getElementById('stopCamera');
-let stream;
-
-startCameraButton.addEventListener('click', async() => {
-    try {
-        stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        cameraFeed.srcObject = stream;
-        cameraFeed.play();
-    } catch (error) {
-        console.error('Error accessing camera:', error);
-    }
-});
-
-stopCameraButton.addEventListener('click', () => {
-    if (stream) {
-        const tracks = stream.getTracks();
-        tracks.forEach((track) => track.stop());
-        cameraFeed.srcObject = null;
-    }
-});
 if ('Notification' in window) {
 
     // Request permission to show notifications
